@@ -10,7 +10,7 @@ const app = express();
 //starting serve
 const dbURL = 'mongodb+srv://dasas:dasas@cluster0.wqk86.mongodb.net/Cluster0?retryWrites=true&w=majority'
 mongoose.connect(dbURL)
-    .then((result) => app.listen(3000))
+    .then((result) => app.listen(process.env.PORT || 3000))
     .catch((err) => console.log(err))
 
 //view engine
