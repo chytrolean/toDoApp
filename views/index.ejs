@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+ <%- include('./partials/head.ejs') %> 
+ 
+<body>
+    <div id="app">
+        <div class="card">
+            <h2>To do:</h2>
+            <ul>
+                 <li v-for="(item, index) in list" :key="(item,index)"  :class="{done__css: item.done}" > 
+                    {{item.title}}
+                    <span v-if="item.done">DONE</span>
+                    <div class="btns">
+                    <small class="done" @click="finish(item,index)" :class="{btnDone: item.done}">&#x2713;</small>
+                    <small class="remove" @click="remove(index)">&#xff38;</small>
+                    </div>
+                 </li>
+            </ul>
+            <form action="/goals" method="POST">
+              <input type="text" placeholder="Add new goal...." v-model="nuItem" name="title" autofocus>
+            </form>
+              </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/vue.js"></script>
+</body>
+</html>

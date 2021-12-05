@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #000;
+    height:100vh;
+    display: grid;
+    place-items: center;
+  }
+  .card{
+    background: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    height: 80%;
+    min-width: 320px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  ul{
+    width: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0;
+    padding-block: 10px;
+  }
+  h2 {
+    align-self: flex-start !important;
+    margin-left: 5px;
+    font-size: 2.5rem;
+    font-weight: 400;
+  }
+  li{
+    display: flex;
+    place-items: center;
+    justify-content: space-between;
+    margin: 0;
+    width:100%;
+    list-style: none;
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #ddd;  
+    height: 2.5rem;
+    padding: 10px 15px;
+  }
+  
+  
+  small{
+    margin: 5px;
+    padding: 1px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  span{
+    color: #000 !important;
+    font-weight: 700;
+  }
+  .done{
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    transition: .5s;
+  }
+  .done:hover{
+      box-shadow: 0 0 5px 3px #4cae4c;
+  
+  }
+  .remove{
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    transition:.5s;
+  }
+  .remove:hover{
+    box-shadow: 0 0 5px 3px #d43f3a;
+  }
+  .btnDone{
+    box-shadow: 0 0 5px 5px #4cae4c;
+  }
+  .done__css{
+    background: rgb(194, 193, 193);
+    color: green;
+  }
+h1.err{
+  font-family: sans-serif;
+  font-size: 5rem;
+  color:red;
+  text-shadow: -4px 2px 0 #0a0e27,
+  -5px 3px 5px red,
+  -6px 4px 0 #0a0e27,
+  -7px 5px 5px red,
+  -8px 6px 0 #0a0e27,
+  -9px 7px 5px red,
+  -10px 8px 0 #0a0e27,
+  -11px 9px 5px red;
+  text-align: center;
+}  
