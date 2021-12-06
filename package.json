@@ -11,5 +11,20 @@
     "mongoose": "^6.0.13",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.15"
-  }
+  },
+  "name": "to-do-app",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chytrolean/toDoApp.git"
+  },
+  "author": "terkaPHP",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chytrolean/toDoApp/issues"
+  },
+  "homepage": "https://github.com/chytrolean/toDoApp#readme",
+  "description": ""
 }
