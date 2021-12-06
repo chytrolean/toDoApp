@@ -1,24 +1,26 @@
 const express = require('express');
+const morgan = require('morgan');
 const mongoose = require('mongoose');
 const Goal = require('./models/goal')
-const http = require('http')
 
 //express app
 const app = express();
-const port = process.env.PORT || 3000
-const server = http.createServer(app)
+
 
 //starting serve
 const dbURL = 'mongodb+srv://dasas:dasas@cluster0.wqk86.mongodb.net/Cluster0?retryWrites=true&w=majority'
 mongoose.connect(dbURL)
-    .then((result) => server.listen(port))
+    .then((result) => app.listen(process.env.PORT || 3000))
     .catch((err) => console.log(err))
 
+//view engine
+app.set('view engine','ejs');
 
 //middleware
 app.use(express.static('public'))
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
+app.use(morgan('dev'))
 
 app.get('/add-goal',(req,res)=>{        //přidání new blog do db po načtení stránky
     const nugoal = new Goal({
