@@ -22,20 +22,20 @@ const app = Vue.createApp({
        console.log(item.done)
        item.done = !item.done
       axios
-        .put(`http://localhost:3000/api/goals/${id}`, {done: item.done})
+        .put(`https://todoappeay.herokuapp.com/api/goals/${id}`, {done: item.done})
         .then(response => response.data)
      },
     remove(index){
       const id = this.list[index]._id
        this.list.splice(index,1)
        console.log(id)
-        axios.delete(`http://localhost:3000/api/goals/${id}`)
+        axios.delete(`https://todoappeay.herokuapp.com/api/goals/${id}`)
         .then(response => this.list = response.data)
         }
     },
     mounted(){
       axios
-        .get('http://localhost:3000/api/goals')
+        .get('https://todoappeay.herokuapp.com/api/goals')
         .then(response => this.list = response.data)
     },
   })
