@@ -6,12 +6,6 @@ const Goal = require('./models/goal')
 //express app
 const app = express();
 
-const request = require('request')
-const fixieRequest = request.defaults({'proxy': process.env.FIXIE_URL});
-
-fixieRequest('https://todoappeay.herokuapp.com', (err, res, body) => {
-  console.log(`Got response: ${res.statusCode}`);
-});
 
 //starting serve
 const dbURL = 'mongodb+srv://dasas:dasas@cluster0.wqk86.mongodb.net/Cluster0?retryWrites=true&w=majority'
