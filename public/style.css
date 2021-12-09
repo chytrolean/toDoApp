@@ -18,7 +18,7 @@
     border: 1px solid #e3e3e3;
     border-radius: 4px;
     height: 80%;
-    width: clamp(260px,600px,800px);
+    width: clamp(230px,600px,800px);
     margin: 20px;
     display: flex;
     flex-direction: column;
