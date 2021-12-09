@@ -19,6 +19,7 @@
     border-radius: 4px;
     height: 80%;
     width: clamp(260px,600px,800px);
+    margin-inline: 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
