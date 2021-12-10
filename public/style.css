@@ -115,9 +115,6 @@
   .done:hover{
       box-shadow: 0 0 5px 3px #4cae4c;
   }
-  .done:focus{
-    transform: rotate(1080);
-  }
   .remove{
     color: #fff;
     background-color: #d9534f;
@@ -131,7 +128,9 @@
     display: flex;
     flex-wrap: nowrap;
   }
-
+  .btnDone{
+    transform: rotate(1080);
+  }
   .done__css{
     background: #00ff1a8c;
     color: transparent;
