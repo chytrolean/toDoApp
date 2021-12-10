@@ -25,7 +25,8 @@
     align-items: flex-start;
   }
   ul{
-    width: 100%;
+    width: 95%;
+    margin: 0 auto;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -46,12 +47,18 @@
     justify-content: space-between;
     margin: 0;
     width:100%;
+    border-radius: 5px;
     list-style: none;
     color: #000;
     background-color: #fff;
     border: 1px solid #ddd;  
     height: 2.5rem;
     padding: 10px 15px;
+    -webkit-transition: background .8s ease-out, text-shadow .5s ease, color .5s ease;
+    -moz-transition: background .8s ease-out, text-shadow .5s ease, color .5s ease;
+    -ms-transition: background .8s ease-out, text-shadow .5s ease, color .5s ease;
+    -o-transition: background .8s ease-out, text-shadow .5s ease, color .5s ease;
+    transition: background .8s ease-out, text-shadow .5s ease, color .5s ease;
   }
   
   
@@ -64,8 +71,22 @@
     cursor: pointer;
   }
   span{
-    color: #000 !important;
+    color: transparent;
     font-weight: 700;
+    text-shadow: none !important;
+    -webkit-transition: color .5s ease;
+    -moz-transition: color .5s ease;
+    -ms-transition: color .5s ease;
+    -o-transition:  color .5s ease;
+    transition: color .5s ease;
+  }
+  .spanDone{
+    color: #000;
+    -webkit-transition: color .5s ease;
+    -moz-transition: color .5s ease;
+    -ms-transition: color .5s ease;
+    -o-transition:  color .5s ease;
+    transition: color .5s ease;
   }
   .done{
     color: #fff;
@@ -90,8 +111,14 @@
     box-shadow: 0 0 5px 5px #4cae4c;
   }
   .done__css{
-    background: rgb(194, 193, 193);
-    color: green;
+    background: rgba(43, 255, 0, 0.474);
+    color: transparent;
+   text-shadow: 0 0 5px rgba(0,0,0,0.5);
+   -webkit-transition: background .8s ease-out, text-shadow .5s ease, color .5s ease;
+   -moz-transition: background .8s ease-out, text-shadow .5s ease, color .5s ease;
+   -ms-transition: background .8s ease-out, text-shadow .5s ease, color .5s ease;
+   -o-transition: background .8s ease-out, text-shadow .5s ease, color .5s ease;
+   transition: background .8s ease-out, text-shadow .5s ease, color .5s ease;
   }
 h1.err{
   font-family: sans-serif;

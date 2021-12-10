@@ -15,7 +15,7 @@
             <ul>
                  <li v-for="(item, index) in list" :key="(item,index)"  :class="{done__css: item.done}" > 
                     {{item.title}}
-                    <span v-if="item.done">DONE</span>
+                    <span :class="{spanDone: item.done}">DONE</span>
                     <div class="btns">
                     <small class="done" @click="finish(item,index)" :class="{btnDone: item.done}">&#x2713;</small>
                     <small class="remove" @click="remove(index)">&#xff38;</small>
