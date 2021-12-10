@@ -130,6 +130,7 @@
   }
   .btnDone{
     transform: rotate(1080);
+    transition: .5s;
   }
   .done__css{
     background: #00ff1a8c;
