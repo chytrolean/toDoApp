@@ -114,7 +114,7 @@
   }
   .done:hover{
       box-shadow: 0 0 5px 3px #4cae4c;
-      transform: rotate(1080deg);
+      transform: rotate(1080);
   }
 
   .remove{
