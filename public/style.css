@@ -17,7 +17,7 @@
     background: #f5f5f5;
     border: 1px solid #e3e3e3;
     border-radius: 4px;
-    height: 80%;
+    height: 80vh;
     width: 93%;
     margin: 20px;
     display: flex;
@@ -26,6 +26,9 @@
   }
   ul{
     width: 95%;
+    height: 80%;
+    padding: 10px;
+    overflow: auto;
     margin: 0 auto;
     color: #fff;
     display: flex;
@@ -35,6 +38,14 @@
     padding: 0;
     padding-block: 10px;
   }
+  ul::-webkit-scrollbar{
+    width: 2px;
+    background: #f5f5f5;
+  }
+  ul::-webkit-scrollbar-thumb{
+  background: rgb(165, 165, 165);
+  border-radius: 50%;
+}
   h2 {
     align-self: flex-start !important;
     margin-left: 5px;
@@ -43,7 +54,7 @@
   }
   li{
     display: flex;
-    place-items: center;
+    align-items: center;
     justify-content: space-between;
     margin: 5px 0;
     width:100%;
@@ -62,7 +73,11 @@
     transition: background .8s ease-out, text-shadow .5s ease, color .5s ease;
   }
   
-  
+  p{
+    flex: 3;
+    text-align: start;
+    font-size: .95rem;
+  }
   small{
     margin: 5px;
     padding: 1px 5px;
@@ -70,6 +85,7 @@
     line-height: 1.5;
     border-radius: 3px;
     cursor: pointer;
+    flex: 1;
   }
   span{
     color: transparent;
@@ -80,6 +96,7 @@
     -ms-transition: color .5s ease;
     -o-transition:  color .5s ease;
     transition: color .5s ease;
+    flex: 1;
   }
   .spanDone{
     color: #000;
@@ -108,11 +125,15 @@
   .remove:hover{
     box-shadow: 0 0 5px 3px #d43f3a;
   }
+  .btns{
+    display: flex;
+    flex-wrap: nowrap;
+  }
   .btnDone{
     box-shadow: 0 0 5px 5px #4cae4c;
   }
   .done__css{
-    background: rgba(43, 255, 0, 0.474);
+    background: #00ff1a8c;
     color: transparent;
    text-shadow: 0 0 5px rgba(0,0,0,0.5);
    -webkit-transition: background .8s ease-out, text-shadow .5s ease, color .5s ease;
@@ -120,6 +141,10 @@
    -ms-transition: background .8s ease-out, text-shadow .5s ease, color .5s ease;
    -o-transition: background .8s ease-out, text-shadow .5s ease, color .5s ease;
    transition: background .8s ease-out, text-shadow .5s ease, color .5s ease;
+  }
+
+  form{
+    padding: 20px;
   }
 h1.err{
   font-family: sans-serif;
