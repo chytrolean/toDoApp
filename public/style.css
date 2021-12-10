@@ -131,9 +131,7 @@
     display: flex;
     flex-wrap: nowrap;
   }
-  .btnDone{
-    box-shadow: 0 0 5px 5px #4cae4c;
-  }
+
   .done__css{
     background: #00ff1a8c;
     color: transparent;
