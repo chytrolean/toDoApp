@@ -53,6 +53,7 @@
     font-weight: 400;
   }
   li{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -68,7 +69,9 @@
     padding: 10px 15px;
     transition: background .8s ease-out, text-shadow .5s ease, color .5s ease;
   }
-  
+  .rmv{
+    color: transparent !important;
+  }
   p{
     flex: 3;
     text-align: start;
@@ -118,9 +121,13 @@
     background-color: #d9534f;
     border-color: #d43f3a;
     transition:.5s;
+    position: relative;
   }
   .remove:hover{
     box-shadow: 0 0 5px 3px #d43f3a;
+  }
+  .removed{
+    animation: rot 1s, btnRmv 1s 1s;
   }
   .btns{
     display: flex;
@@ -129,6 +136,10 @@
   .btnDone{
 
     animation: rot 1s, btnDone .5s 1s;
+  }
+  .rmvd{
+    opacity: 0;
+    transition: .5s;
   }
   .done__css{
     background: #00ff1a8c;
@@ -163,6 +174,12 @@
   50%{right: 80vw; opacity: 0;}
   75%{right: 0px;}
   100%{box-shadow: 0 0 5px 5px #4cae4c; opacity: 1;}
+}
+@keyframes btnRmv {
+  0%{right:0px;  position: relative; top:0;}
+  25%{position: absolute;}
+  50%{right: 50%;position: absolute; top: 0;}
+  100%{box-shadow: 0 0 5px 5px #d43f3a;  right: 50%; position: absolute; top: 0;}
 }
 h1.err{
   font-family: sans-serif;

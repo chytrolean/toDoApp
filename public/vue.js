@@ -2,7 +2,6 @@ const app = Vue.createApp({
     data() {
       return {
         nuItem:'',
-        isRemoved: false,
         list: [{
           'goal': 'nauč se vue',
         }]
@@ -13,7 +12,8 @@ const app = Vue.createApp({
       if(!this.nuItem)return
         this.list.push({
           title: this.nuItem,
-          done: false
+          done: false,
+          isRemoved: false
         })
         this.nuItem = '' 
      },
@@ -25,12 +25,16 @@ const app = Vue.createApp({
         .put(`/api/goals/${id}`, {done: item.done})
         .then(response => response.data)
      },
-    remove(index){
+    remove(item,index){
       const id = this.list[index]._id
-       this.list.splice(index,1)
+      item.isRemoved = !item.isRemoved
+      setTimeout(() => {
+        this.list.splice(index,1)
        console.log(id)
         axios.delete(`/api/goals/${id}`)
         .then(response => this.list = response.data)
+      }, 2000);
+       
         }
     },
     mounted(){
